@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<project name="FasterGC" default="compile">
+
+  <target name="init" >
+    <mkdir dir="build/classes" />
+    <mkdir dir="dist" />
+  </target>
+
+  <target name="compile" depends="init" >
+    <javac srcdir="src" destdir="build/classes" debug="on" debuglevel="lines,vars,source" source="1.6">
+      <classpath>
+        <pathelement location="extlibs/jargs.jar"/>
+        <pathelement location="extlibs/commons-io-1.4.jar"/>
+        <pathelement path="build/classes"/>
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="clean" depends="init" >
+    <delete dir="build" />
+    <delete dir="dist" />
+  </target>
+
+  <target name="archive" depends="compile" >
+    <jar destfile="dist/FasterGC.jar">
+      <fileset dir="build/classes"/>
+    </jar>
+  </target>
+
+  <target name="runlevenshtein" depends="archive">
+    <exec executable="./runlevenshtein"/>
+  </target>
+
+  <target name="runsw" depends="archive">
+    <exec executable="./runsw"/>
+  </target>
+
+  <target name="runhamming" depends="archive">
+    <exec executable="./runhamming"/>
+  </target>
+
+  <target name="runaes" depends="archive">
+    <exec executable="./runaes"/>
+  </target>
+</project>

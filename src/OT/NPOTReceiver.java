@@ -5,10 +5,12 @@ package OT;
 import java.math.*;
 import java.util.*;
 import java.io.*;
+import java.security.SecureRandom;
+
 import Cipher.Cipher;
 
 public class NPOTReceiver extends Receiver {
-    private static Random rnd = new Random();
+    private static SecureRandom rnd = new SecureRandom();
 
     private int msgBitLength;
     private BigInteger p, q, g, C;

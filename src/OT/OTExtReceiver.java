@@ -5,11 +5,13 @@ package OT;
 import java.util.*;
 import java.math.*;
 import java.io.*;
+import java.security.SecureRandom;
+
 import Cipher.Cipher;
 import Utils.*;
 
 public class OTExtReceiver extends Receiver {
-    private static Random rnd = new Random();
+    private static SecureRandom rnd = new SecureRandom();
 
     private int k1;
     private int k2;

@@ -3,6 +3,7 @@
 package Test;
 
 import java.util.*;
+import java.security.SecureRandom;
 
 import jargs.gnu.CmdLineParser;
 
@@ -15,7 +16,7 @@ class TestSWServer {
     static int n;
     static String matrixFile;
 
-    static Random rnd = new Random();
+    static SecureRandom rnd = new SecureRandom();
 
     private static void printUsage() {
 	System.out.println("Usage: java TestSWServer [{-c, --codons} codons] [{-L, --max-bit-length} L] [{-a, --autogen}] [{-n, --protein-length} length]");

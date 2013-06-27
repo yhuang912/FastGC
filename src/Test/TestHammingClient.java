@@ -4,6 +4,7 @@ package Test;
 
 import java.util.*;
 import java.math.*;
+import java.security.SecureRandom;
 
 import jargs.gnu.CmdLineParser;
 
@@ -14,7 +15,7 @@ class TestHammingClient {
     static BigInteger bits;
     static int n;
     
-    static Random rnd = new Random();
+    static SecureRandom rnd = new SecureRandom();
 
     private static void printUsage() {
 	System.out.println("Usage: java TestHammingClient [{-n, --bit-length} length] [{-s, --server} servername] [{-r, --iteration} r]");

@@ -5,12 +5,14 @@ package OT;
 import java.math.*;
 import java.util.*;
 import java.io.*;
+import java.security.SecureRandom;
+
 import Cipher.Cipher;
 import Utils.*;
 
 public class NPOTSender extends Sender {
 
-    private static Random rnd = new Random();
+    private static SecureRandom rnd = new SecureRandom();
     private static final int certainty = 80;
 
     private final static int qLength = 512; //512;

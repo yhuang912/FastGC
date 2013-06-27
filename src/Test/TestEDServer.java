@@ -4,6 +4,7 @@ package Test;
 
 import java.util.*;
 import java.math.*;
+import java.security.SecureRandom;
 
 import jargs.gnu.CmdLineParser;
 
@@ -15,7 +16,7 @@ class TestEDServer {
     static boolean autogen;
     static int n;
     
-    static Random rnd = new Random();
+    static SecureRandom rnd = new SecureRandom();
 
     private static void printUsage() {
 	System.out.println("Usage: java TestEDServer [{-d, --dna} dna] [{-L, --EDBitLength} L] [{-a, --autogen}] [{-n, --DNALength} length]");

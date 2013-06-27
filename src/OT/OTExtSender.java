@@ -5,6 +5,8 @@ package OT;
 import java.util.*;
 import java.math.*;
 import java.io.*;
+import java.security.SecureRandom;
+
 import Cipher.Cipher;
 import Utils.*;
 
@@ -14,7 +16,7 @@ public class OTExtSender extends Sender {
 	public static final int k2 = 80;
     }
 
-    private static Random rnd = new Random();
+    private static SecureRandom rnd = new SecureRandom();
     private Receiver rcver;
     private BigInteger s;
     private BigInteger[] keys;

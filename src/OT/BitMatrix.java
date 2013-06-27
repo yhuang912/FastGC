@@ -4,6 +4,7 @@ package OT;
 
 import java.math.*;
 import java.util.*;
+import java.security.SecureRandom;
 
 class BitMatrix {
     private int nRows;
@@ -16,7 +17,7 @@ class BitMatrix {
 	data = new BigInteger[nCols];
     }
 
-    public void initialize(Random rnd) {
+    public void initialize(SecureRandom rnd) {
 	for (int i = 0; i < nCols; i++)
 	    data[i] = new BigInteger(nRows, rnd);
     }

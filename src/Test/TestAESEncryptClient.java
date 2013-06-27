@@ -3,6 +3,7 @@
 package Test;
 
 import java.util.*;
+import java.security.SecureRandom;
 
 import jargs.gnu.CmdLineParser;
 
@@ -17,7 +18,7 @@ class TestAESEncryptClient {
 			  0x31, 0x31, 0x98, 0xa2, 
 			  0xe0, 0x37, 0x07, 0x34};
 
-    static Random rnd = new Random();
+    static SecureRandom rnd = new SecureRandom();
 
     private static void printUsage() {
 	System.out.println("Usage: java TestAESEncryptClient [{-a, --autogen}] [{-s, --server} servername]");

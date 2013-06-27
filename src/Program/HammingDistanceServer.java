@@ -4,6 +4,7 @@ package Program;
 
 import java.math.*;
 import java.util.*;
+import java.security.SecureRandom;
 
 import YaoGC.*;
 import Utils.*;
@@ -15,7 +16,7 @@ public class HammingDistanceServer extends ProgServer {
 
     private BigInteger[][] sBitslps, cBitslps;
 
-    private static final Random rnd = new Random();
+    private static final SecureRandom rnd = new SecureRandom();
 
     public HammingDistanceServer(BigInteger bv, int length) {
 	sBits = bv;

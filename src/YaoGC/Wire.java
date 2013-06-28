@@ -4,13 +4,14 @@ package YaoGC;
 
 import java.math.*;
 import java.util.*;
+import java.security.SecureRandom;
 
 public class Wire extends TransitiveObservable {
     public static final int UNKNOWN_SIG = -1;
 
     // These four fields are for garbling
     public static int K = 0;
-    private static Random rnd = new Random();
+    private static SecureRandom rnd = new SecureRandom();
     public static final int labelBitLength = 80;
 
     public static final BigInteger R = new BigInteger(labelBitLength-1, rnd);
